@@ -1,0 +1,11 @@
+#card_of_book{
+    float:left;
+    position:relative;
+}
+#description{
+    float:left;
+}
+#text{
+    font-size:1.2em;
+    text-indent:25px;
+}
