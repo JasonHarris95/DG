@@ -1,5 +1,32 @@
 {% extends 'base.html' %}
 
+{% block container_content %}
+<!-- Icon & name in navigation en -->
+<a class="navbar-brand ms-5" href="{% url 'home' %}">
+    <img src="../../static/images/icon.jpg" width="50" height="50">
+</a>
+<a class="nav-link active" href="{% url 'home' %}">
+    <h3 class="text-white" lang="en">DreamG</h3>
+</a>
+
+<!-- Navigation en -->
+<div class="collapse navbar-collapse" id="navbarSupportedContent_en">
+    <ul class="navbar-nav mx-md-auto">
+        <li class="nav-item me-5">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}"><h3 class="text-white">HOME</h3></a>
+        </li>
+        <li class="nav-item me-5 ms-5">
+            <a class="nav-link active" aria-current="page" href="{% url 'games' %}"><h3 class="text-white">GAMES</h3></a>
+        </li>
+        <li class="nav-item me-5 ms-5">
+            <a class="nav-link active" aria-current="page" href="{% url 'projects' %}"><h3 class="text-white">OTHER PROJECTS</h3></a>
+        </li>
+        <li class="nav-item me-5 ms-5">
+            <a class="nav-link active" aria-current="page" href="{% url 'contacts' %}"><h3 class="text-white">CONTACTS</h3></a>
+        </li>
+    </ul>
+</div>
+{% endblock %}
 {% block main_content %}
     <link rel="stylesheet" href="../../static/css/projects.css">
 

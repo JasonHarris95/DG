@@ -1,5 +1,32 @@
 {% extends 'base.html' %}
 
+{% block container_content %}
+<!-- Icon & name in navigation ru -->
+<a class="navbar-brand ms-5" href="{% url 'home_ru' %}">
+    <img src="../../static/images/icon.jpg" width="50" height="50">
+</a>
+<a class="nav-link active" href="{% url 'home_ru' %}">
+    <h3 class="text-white" lang="en">DreamG</h3>
+</a>
+
+<!-- Navigation ru -->
+<div class="collapse navbar-collapse" id="navbarSupportedContent_ru">
+    <ul class="navbar-nav mx-md-auto">
+        <li class="nav-item me-5">
+            <a class="nav-link active" aria-current="page" href="{% url 'home_ru' %}"><h3 class="text-white">ГЛАВНАЯ</h3></a>
+        </li>
+        <li class="nav-item me-5 ms-5">
+            <a class="nav-link active" aria-current="page" href="{% url 'games_ru' %}"><h3 class="text-white">ИГРЫ</h3></a>
+        </li>
+        <li class="nav-item me-5 ms-5">
+            <a class="nav-link active" aria-current="page" href="{% url 'projects_ru' %}"><h3 class="text-white">ДРУГИЕ ПРОЕКТЫ</h3></a>
+        </li>
+        <li class="nav-item me-5 ms-5">
+            <a class="nav-link active" aria-current="page" href="{% url 'contacts_ru' %}"><h3 class="text-white">КОНТАКТЫ</h3></a>
+        </li>
+    </ul>
+</div>
+{% endblock %}
 {% block main_content %}
     <link rel="stylesheet" href="../../static/css/contacts.css">
 
