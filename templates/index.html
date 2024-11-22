@@ -44,17 +44,17 @@
             <!-- All block navigation -->
             <nav class="navbar navbar-expand-md bg-dark">
 
-                <div class="container-fluid col-md-8">
+                <div class="container-fluid col-md-9">
                     {% block container_content %} {% endblock %}
                 </div>
 
                 <!-- Change language -->
-                <div class="col-md-4">
-                    <a class="nav-link active ms-5" href="{% url 'home_ru' %}">
+                <div class="col-md-3">
+                    <a class="nav-link active ms-5 col-md-1" href="{% url 'home_ru' %}">
                         <h3 class="text-white" lang="en">RU</h3>
                     </a>
-                    <h3 class="text-white ms-3"> | </h3>
-                    <a class="nav-link active mx-3" href="{% url 'home' %}">
+                    <h3 class="text-white ms-3 col-md-1"> | </h3>
+                    <a class="nav-link active mx-3 col-md-1" href="{% url 'home' %}">
                         <h3 class="text-white" lang="en">ENG</h3>
                     </a>
                 </div>
