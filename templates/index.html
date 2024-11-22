@@ -39,54 +39,21 @@
 </head>
 
 <body>
-
-    <header>
-        <div class="container">
-            <div class="row">
-                <!-- All block navigation -->
-                <nav class="navbar navbar-expand-md bg-dark">
-
-                    <div class="container-fluid col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                        <div class="col-12 col-sm-8 col-md-9 col-lg-10">
-                            {% block container_content %} {% endblock %}
-                        </div>
-
-                        <!-- Change language -->
-                        <div class="col-12 col-sm-4 col-md-3 col-lg-3">
-                            <a class="nav-link active ms-5" href="{% url 'home_ru' %}">
-                                <h3 class="text-white" lang="en">RU</h3>
-                            </a>
-                            <h3 class="text-white ms-3"> | </h3>
-                            <a class="nav-link active mx-3" href="{% url 'home' %}">
-                                <h3 class="text-white" lang="en">ENG</h3>
-                            </a>
-                        </div>
-                    </div>
-
-                </nav>
-            </div>
-        </div>
-    </header>
+    {% block container_content %} {% endblock %}
 
     <main>
-        <div class="container">
-            <!-- Loading -->
-            <div id="loading">
-                <div class="spinner-border mt-2 ms-2" style="width: 3rem; height: 3rem;" role="status">
-                    <span class="visually-hidden"></span>
-                </div>
-                <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
-                    <span class="visually-hidden" lang="en">Loading...</span>
-                </div>
+        <!-- Loading -->
+        <div id="loading">
+            <div class="spinner-border mt-2 ms-2" style="width: 3rem; height: 3rem;" role="status">
+                <span class="visually-hidden"></span>
             </div>
-
-            <!-- Block content -->
-            <div class="row">
-                <div class="container-fluid col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                    {% block main_content %} {% endblock %}
-                </div>
+            <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
+                <span class="visually-hidden" lang="en">Loading...</span>
             </div>
         </div>
+
+        <!-- Block content -->
+        {% block main_content %} {% endblock %}
 
         <script src="../../static/js/home.js"></script>
         <!-- for bootstrap -->
@@ -98,13 +65,9 @@
 </body>
 
 <footer class="page-footer" width="100">
-    <div class="container-fluid col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-        <nav class="navbar navbar-expand-md bg-dark mt-5">
-            {% block foot %}{% endblock %}
-        </nav>
-    </div>
+    <nav class="navbar navbar-expand-md bg-dark mt-5">
+        {% block foot %}{% endblock %}
+    </nav>
 </footer>
-
-</body>
 
 </html>
