@@ -25,8 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-^n_+$l_8elyx24owf7fb&#@+t$_aik_lt&d%y=m*#(@=2j8q5c')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
-DEBUG = True
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
+
 ALLOWED_HOSTS = ['dreamgames.xyz', 'www.dreamgames.xyz']
 #INTERNAL_IPS = ["127.0.0.1",]
 
