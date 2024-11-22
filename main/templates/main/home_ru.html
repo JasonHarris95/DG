@@ -1,7 +1,5 @@
 {% extends 'index.html' %}
 
-<link rel="stylesheet" href="../../static/css/base.css">
-
 {% block container_content %}
 <div class="container-fluid">
     <div class="row">
@@ -10,7 +8,7 @@
 
             <!-- Icon & name in navigation en -->
 
-            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <div id="Icon&Name" class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
                 <a class="navbar-brand ms-5" href="{% url 'home_ru' %}">
                     <img src="../../static/images/icon.jpg" width="50" height="50">
                 </a>
@@ -40,7 +38,7 @@
 
             <!-- Change language -->
 
-            <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <div id="ChangeLanguage" class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
                 <a class="nav-link active ms-5" href="{% url 'home_ru' %}">
                     <h3 class="text-white" lang="en">RU</h3>
                 </a>
@@ -57,7 +55,7 @@
 {% block main_content %}
 <div class="container">
     <div class="row">
-        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div id="CaroselBlock" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <!-- Block carousel -->
             <div id="carousel_home" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-theme="dark">
                 <div class="carousel-indicators">
@@ -91,12 +89,16 @@
 {% endblock %}
 
 {% block foot %}
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-12 col-sm-6 col-md-12 col-lg-12 col-xl-12">
-            <p class="text-white ms-5 mt-3">© 2024 DreamG. Все права защищены.</br>Сайт был разработан с любовью компанией Just Web.</p>
-            <p class="text-white text-md-end me-3">Текущая версия: V.03.01</p>
+<footer class="page-footer" width="100">
+    <nav class="navbar navbar-expand-md bg-dark mt-5">
+        <div id="FooterBlock" class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-12 col-lg-12 col-xl-12">
+                    <p class="text-white ms-5 mt-3">© 2024 DreamG. Все права защищены.</br>Сайт был разработан с любовью компанией Just Web.</p>
+                    <p class="text-white text-md-end me-3">Текущая версия: V.03.01</p>
+                </div>
+            </div>
         </div>
-    </div>
-</div>
+    </nav>
+</footer>
 {% endblock %}
