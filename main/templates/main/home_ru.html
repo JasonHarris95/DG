@@ -2,18 +2,16 @@
 <link rel="stylesheet" href="../../static/css/base.css">
 
 {% block container_content %}
-<div class="container-fluid">
-    <div class="row">
         <!-- All block navigation -->
         <nav class="navbar navbar-expand-md bg-dark">
 
             <!-- Icon & name in navigation en -->
 
             <div id="Icon&Name" class="p-2 flex-fill">
-                <a class="navbar-brand ms-5" href="{% url 'home_ru' %}" style="float: left;">
+                <a class="navbar-brand ms-5" href="{% url 'home_ru' %}">
                     <img src="../../static/images/icon.jpg" width="50" height="50">
                 </a>
-                <a class="nav-link active" href="{% url 'home_ru' %}" style="float: left;">
+                <a class="nav-link active" href="{% url 'home_ru' %}">
                     <h3 class="text-white" lang="en">DreamG</h3>
                 </a>
             </div>
@@ -41,14 +39,13 @@
                 <a class="nav-link active ms-5" href="{% url 'home_ru' %}" style="float: right;">
                     <h3 class="text-white" lang="en">RU</h3>
                 </a>
-                <h3 class="text-white mx-2" style="float: right;"> | </h3>
+                <h3 class="text-white mx-2"> | </h3>
                 <a class="nav-link active mx-3" href="{% url 'home' %}">
-                    <h3 class="text-white" lang="en mx-3" style="float: right;">ENG</h3>
+                    <h3 class="text-white" lang="en mx-3">ENG</h3>
                 </a>
             </div>
         </nav>
-    </div>
-</div>
+
 {% endblock %}
 
 {% block main_content %}
@@ -85,8 +82,8 @@
 {% block foot %}
 <footer class="page-footer" width="100" style="width: 100%; bottom: 0; left: 0;">
     <nav class="navbar navbar-expand-md bg-dark mt-5">
-        <p class="text-white ms-5 mt-3" style="float: left;">© 2024 DreamG. Все права защищены.</br>Сайт был разработан с любовью компанией Just Web.</p>
-        <p class="text-white text-md-end" style="float: right;">Текущая версия: V.03.01</p>
+        <p class="text-white ms-5 mt-3">© 2024 DreamG. Все права защищены.</br>Сайт был разработан с любовью компанией Just Web.</p>
+        <p class="text-white text-md-end">Текущая версия: V.03.01</p>
     </nav>
 </footer>
 {% endblock %}
