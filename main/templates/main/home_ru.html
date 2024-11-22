@@ -9,7 +9,7 @@
 
             <!-- Icon & name in navigation en -->
 
-            <div id="Icon&Name" class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2">
+            <div id="Icon&Name" class="col-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
                 <a class="navbar-brand ms-5" href="{% url 'home_ru' %}" style="float: left;">
                     <img src="../../static/images/icon.jpg" width="50" height="50">
                 </a>
@@ -20,27 +20,35 @@
 
             <!-- Navigation ru -->
 
-            <div id="navbarSupportedContent_ru" class="collapse navbar-collapse col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+            <div id="navbarSupportedContent_ru" class="collapse navbar-collapse">
                 <ul class="navbar-nav mx-md-auto">
-                    <li class="nav-item me-5">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home_ru' %}"><h3 class="text-white">ГЛАВНАЯ</h3></a>
-                    </li>
-                    <li class="nav-item me-5 ms-5">
-                        <a class="nav-link active" aria-current="page" href="{% url 'games_ru' %}"><h3 class="text-white">ИГРЫ</h3></a>
-                    </li>
-                    <li class="nav-item me-5 ms-5">
-                        <a class="nav-link active" aria-current="page" href="{% url 'projects_ru' %}"><h3 class="text-white">ДРУГИЕ ПРОЕКТЫ</h3></a>
-                    </li>
-                    <li class="nav-item me-5 ms-5">
-                        <a class="nav-link active" aria-current="page" href="{% url 'contacts_ru' %}"><h3 class="text-white">КОНТАКТЫ</h3></a>
-                    </li>
+                    <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                        <li class="nav-item me-5">
+                            <a class="nav-link active" aria-current="page" href="{% url 'home_ru' %}"><h3 class="text-white">ГЛАВНАЯ</h3></a>
+                        </li>
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                        <li class="nav-item me-5 ms-5">
+                            <a class="nav-link active" aria-current="page" href="{% url 'games_ru' %}"><h3 class="text-white">ИГРЫ</h3></a>
+                        </li>
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                        <li class="nav-item me-5 ms-5">
+                            <a class="nav-link active" aria-current="page" href="{% url 'projects_ru' %}"><h3 class="text-white">ДРУГИЕ ПРОЕКТЫ</h3></a>
+                        </li>
+                    </div>
+                    <div class="col-2 col-sm-2 col-md-2 col-lg-2 col-xl-2">
+                        <li class="nav-item me-5 ms-5">
+                            <a class="nav-link active" aria-current="page" href="{% url 'contacts_ru' %}"><h3 class="text-white">КОНТАКТЫ</h3></a>
+                        </li>
+                    </div>
                 </ul>
             </div>
 
             <!-- Change language -->
 
-            <div id="ChangeLanguage" class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                <a class="nav-link active ms-5" href="{% url 'home_ru' %}" style="float: left;">
+            <div id="ChangeLanguage" class="col-4 col-sm-4 col-md-2 col-lg-2 col-xl-2">
+                <a class="nav-link active ms-5" href="{% url 'home_ru' %}">
                     <h3 class="text-white" lang="en">RU</h3>
                 </a>
                 <h3 class="text-white ms-3" style="float: left;"> | </h3>
@@ -56,34 +64,32 @@
 {% block main_content %}
 <div class="container">
     <div class="row">
-        <div id="CaroselBlock" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <!-- Block carousel -->
-            <div id="carousel_home" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-theme="dark">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carousel_home" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carousel_home" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carousel_home" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="/static/images/game_warriors_m.png" class="d-block mx-auto w-60" alt="Ой, не загружается">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/static/images/main_img.png" class="d-block mx-auto w-60" alt="Ой, не загружается">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="/static/images/gigatron_fon.png" class="d-block mx-auto w-60" alt="Ой, не загружается">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel_home" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Последний</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel_home" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Следующий</span>
-                </button>
+         <!-- Block carousel -->
+        <div id="carousel_home" class="carousel slide mt-5 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" data-bs-ride="carousel" data-bs-theme="dark">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel_home" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carousel_home" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carousel_home" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/static/images/game_warriors_m.png" class="d-block mx-auto w-60" alt="Ой, не загружается">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/images/main_img.png" class="d-block mx-auto w-60" alt="Ой, не загружается">
+                </div>
+                <div class="carousel-item">
+                    <img src="/static/images/gigatron_fon.png" class="d-block mx-auto w-60" alt="Ой, не загружается">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel_home" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Последний</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel_home" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Следующий</span>
+            </button>
         </div>
     </div>
 </div>
