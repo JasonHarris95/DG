@@ -1,4 +1,5 @@
 {% extends 'index.html' %}
+<link rel="stylesheet" href="../../static/css/base.css">
 
 {% block container_content %}
 <div class="container-fluid">
@@ -9,10 +10,10 @@
             <!-- Icon & name in navigation en -->
 
             <div id="Icon&Name" class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                <a class="navbar-brand ms-5" href="{% url 'home_ru' %}">
+                <a class="navbar-brand ms-5" href="{% url 'home_ru' %}" style="float: left;">
                     <img src="../../static/images/icon.jpg" width="50" height="50">
                 </a>
-                <a class="nav-link active" href="{% url 'home_ru' %}">
+                <a class="nav-link active" href="{% url 'home_ru' %}" style="float: left;">
                     <h3 class="text-white" lang="en">DreamG</h3>
                 </a>
             </div>
@@ -39,11 +40,11 @@
             <!-- Change language -->
 
             <div id="ChangeLanguage" class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                <a class="nav-link active ms-5" href="{% url 'home_ru' %}">
+                <a class="nav-link active ms-5" href="{% url 'home_ru' %}" style="float: left;">
                     <h3 class="text-white" lang="en">RU</h3>
                 </a>
-                <h3 class="text-white ms-3"> | </h3>
-                <a class="nav-link active mx-3" href="{% url 'home' %}">
+                <h3 class="text-white ms-3" style="float: left;"> | </h3>
+                <a class="nav-link active mx-3" href="{% url 'home' %}" style="float: left;">
                     <h3 class="text-white" lang="en">ENG</h3>
                 </a>
             </div>
