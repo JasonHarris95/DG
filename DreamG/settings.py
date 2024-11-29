@@ -85,7 +85,7 @@ WSGI_APPLICATION = 'DreamG.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',                                                                            ######
-        'NAME': 'u2895647_django',
+        'NAME': 'u2895647_django',                                                                                       ######
     }
 }
 
