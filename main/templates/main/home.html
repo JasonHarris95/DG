@@ -1,67 +1,78 @@
 {% extends 'index.html' %}
 
-<link rel="stylesheet" href="../../static/css/base.css">
-
 {% block container_content %}
 
 <!-- Icon & name in navigation en -->
-<a class="navbar-brand ms-5" href="{% url 'home' %}">
-    <img src="../../static/images/icon.jpg" width="50" height="50">
-</a>
-<a class="nav-link active" href="{% url 'home' %}">
-    <h3 class="text-white" lang="en">DreamG</h3>
-</a>
+<div class="container-fluid col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex justify-content-start">
+    <div class="row col-8 col-sm-7 col-md-7 col-lg-6 col-xl-5">
+        <a class="navbar-brand ms-3 mt-1 col-5 col-sm-5 col-md-3 col-lg-3 col-xl-3" href="{% url 'home' %}">
+            <img src="../../static/images/icon.jpg" width="50" height="50">
+        </a>
+        <a class="nav-link active col-5 col-sm-5 col-md-3 col-lg-3 col-xl-2" href="{% url 'home' %}">
+            <h3 class="text-white mt-3" lang="en">DreamG</h3>
+        </a>
+    </div>
+</div>
 
 <!-- Navigation en -->
-<div class="collapse navbar-collapse" id="navbarSupportedContent_en">
-    <ul class="navbar-nav mx-md-auto">
-        <li class="nav-item me-5">
-            <a class="nav-link active" aria-current="page" href="{% url 'home' %}"><h3 class="text-white">HOME</h3></a>
-        </li>
-        <li class="nav-item me-5 ms-5">
-            <a class="nav-link active" aria-current="page" href="{% url 'games' %}"><h3 class="text-white">GAMES</h3></a>
-        </li>
-        <li class="nav-item me-5 ms-5">
-            <a class="nav-link active" aria-current="page" href="{% url 'projects' %}"><h3 class="text-white">OTHER PROJECTS</h3></a>
-        </li>
-        <li class="nav-item me-5 ms-5">
-            <a class="nav-link active" aria-current="page" href="{% url 'contacts' %}"><h3 class="text-white">CONTACTS</h3></a>
-        </li>
-    </ul>
+<div id="navbarSupportedContent_ru" class="container-fluid mt-3 ms-3 col-12 col-sm-12 col-md-9 col-lg-9 col-xl-12 p-2 flex-fill">
+    <div class="row col-7 col-sm-7 col-md-9 col-lg-9 col-xl-12">
+        <div class="col-12 col-sm-12 col-md-3 col-lg-2 col-xl-3">
+            <a class="nav-link active" href="{% url 'home' %}"><h3 class="text-white">HOME</h3></a>
+        </div>
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <a class="nav-link active" href="{% url 'games' %}"><h3 class="text-white">GAMES</h3></a>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
+            <a class="nav-link active" href="{% url 'projects' %}"><h3 class="text-white">OTHER PROJECTS</h3></a>
+        </div>
+        <div class="col-12 col-sm-12 col-md-3 col-lg-2 col-xl-1">
+            <a class="nav-link active" href="{% url 'contacts' %}"><h3 class="text-white">CONTACTS</h3></a>
+        </div>
+    </div>
 </div>
 {% endblock %}
 {% block main_content %}
+
 <!-- Block carousel -->
-<div id="carousel_home" class="carousel slide mt-5" data-bs-ride="carousel" data-bs-theme="dark" lang="en">
-  <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carousel_home" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carousel_home" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carousel_home" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="/static/images/game_warriors_m.png" class="d-block mx-auto w-60" alt="Ops, don't load">
+<div id="carousel_home" class="carousel slide mt-5 ms-4" data-bs-ride="carousel" data-bs-theme="dark" lang="en">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carousel_home" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carousel_home" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carousel_home" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="carousel-item">
-      <img src="/static/images/main_img.png" class="d-block mx-auto w-60" alt="Ops, don't load">
+    <div class="carousel-inner row">
+        <div class="carousel-item active col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9">
+            <img src="/static/images/game_warriors_m.png" class="d-block mx-auto w-60 col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9" alt="Ops, don't load">
+        </div>
+        <div class="carousel-item col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9">
+            <img src="/static/images/main_img.png" class="d-block mx-auto w-60 col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9" alt="Ops, don't load">
+        </div>
+        <div class="carousel-item col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9">
+            <img src="/static/images/gigatron_fon.png" class="d-block mx-auto w-60 col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9" alt="Ops, don't load">
+        </div>
     </div>
-    <div class="carousel-item">
-      <img src="/static/images/gigatron_fon.png" class="d-block mx-auto w-60" alt="Ops, don't load">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carousel_home" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Last</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carousel_home" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carousel_home" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Last</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carousel_home" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
+
 {% endblock %}
 {% block foot %}
-<div class="container-fluid">
-    <p class="text-white ms-5 mt-3">© 2024 DreamG. All rights reserved.</br>The site was developed with love by Just Web</p>
-    <p class="text-white text-md-end me-3">Current version: V.02.01</p>
+<div class="container-fluid mt-3">
+    <div class="row col-8 col-sm-8 col-md-12 col-lg-12 col-xl-3">
+        <p class="text-white">© 2024 DreamG. All rights reserved.</p>
+    </div>
+    <div class="row col-10 col-sm-12 col-md-10 col-lg-12 col-xl-3">
+        <p class="text-white">The site was developed with love by Just Web</p>
+    </div>
+    <div class="row col-6 col-sm-6 col-md-12 col-lg-12 col-xl-2">
+        <p class="text-white">Current version: V.05.01</p>
+    </div>
 </div>
 {% endblock %}

@@ -1,75 +1,60 @@
 {% extends 'index.html' %}
-<link rel="stylesheet" href="../../static/css/base.css">
 
 {% block container_content %}
-        <!-- All block navigation -->
-        <nav class="navbar navbar-expand-md bg-dark">
 
-            <!-- Icon & name in navigation en -->
+<!-- Icon & name in navigation en -->
+<div class="container-fluid col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex justify-content-start">
+    <div class="row col-8 col-sm-7 col-md-7 col-lg-6 col-xl-5">
+        <a class="navbar-brand ms-3 mt-1 col-5 col-sm-5 col-md-3 col-lg-3 col-xl-3" href="{% url 'home_ru' %}">
+            <img src="../../static/images/icon.jpg" width="50" height="50">
+        </a>
+        <a class="nav-link active col-5 col-sm-5 col-md-3 col-lg-3 col-xl-2" href="{% url 'home_ru' %}">
+            <h3 class="text-white mt-3" lang="en">DreamG</h3>
+        </a>
+    </div>
+</div>
 
-            <div id="Icon&Name" class="p-2 flex-fill">
-                <a class="navbar-brand ms-5" href="{% url 'home_ru' %}">
-                    <img src="../../static/images/icon.jpg" width="50" height="50">
-                </a>
-                <a class="nav-link active" href="{% url 'home_ru' %}">
-                    <h3 class="text-white" lang="en">DreamG</h3>
-                </a>
-            </div>
-
-            <!-- Navigation ru -->
-
-            <div id="navbarSupportedContent_ru" class="p-2 flex-fill">
-                <div class="p-2 flex-fill">
-                    <a class="nav-link active" aria-current="page" href="{% url 'home_ru' %}"><h3 class="text-white">ГЛАВНАЯ</h3></a>
-                </div>
-                <div class="p-2 flex-fill">
-                    <a class="nav-link active" aria-current="page" href="{% url 'games_ru' %}"><h3 class="text-white">ИГРЫ</h3></a>
-                </div>
-                <div class="p-2 flex-fill">
-                    <a class="nav-link active" aria-current="page" href="{% url 'projects_ru' %}"><h3 class="text-white">ДРУГИЕ ПРОЕКТЫ</h3></a>
-                </div>
-                <div class="p-2 flex-fill">
-                    <a class="nav-link active" aria-current="page" href="{% url 'contacts_ru' %}"><h3 class="text-white">КОНТАКТЫ</h3></a>
-                </div>
-            </div>
-
-            <!-- Change language -->
-
-            <div id="ChangeLanguage" class="p-2 flex-fill">
-                <a class="nav-link active ms-5" href="{% url 'home_ru' %}" style="float: right;">
-                    <h3 class="text-white" lang="en">RU</h3>
-                </a>
-                <h3 class="text-white mx-2"> | </h3>
-                <a class="nav-link active mx-3" href="{% url 'home' %}">
-                    <h3 class="text-white" lang="en mx-3">ENG</h3>
-                </a>
-            </div>
-        </nav>
-
+<!-- Navigation ru -->
+<div id="navbarSupportedContent_ru" class="container-fluid mt-3 ms-3 col-12 col-sm-12 col-md-9 col-lg-9 col-xl-12 p-2 flex-fill">
+    <div class="row col-7 col-sm-7 col-md-9 col-lg-9 col-xl-12">
+        <div class="col-12 col-sm-12 col-md-3 col-lg-2 col-xl-3">
+            <a class="nav-link active" href="{% url 'home_ru' %}"><h3 class="text-white">ГЛАВНАЯ</h3></a>
+        </div>
+        <div class="col-12 col-sm-12 col-md-3 col-lg-2 col-xl-2">
+            <a class="nav-link active" href="{% url 'games_ru' %}"><h3 class="text-white">ИГРЫ</h3></a>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
+            <a class="nav-link active" href="{% url 'projects_ru' %}"><h3 class="text-white">ДРУГИЕ ПРОЕКТЫ</h3></a>
+        </div>
+        <div class="col-12 col-sm-12 col-md-3 col-lg-2 col-xl-2">
+            <a class="nav-link active" href="{% url 'contacts_ru' %}"><h3 class="text-white">КОНТАКТЫ</h3></a>
+        </div>
+    </div>
+</div>
 {% endblock %}
-
 {% block main_content %}
+
 <!-- Block carousel -->
-<div id="carousel_home" class="carousel slide mt-5 p-2 flex-fill" data-bs-ride="carousel" data-bs-theme="dark">
+<div id="carousel_home" class="carousel slide mt-5 ms-4" data-bs-ride="carousel" data-bs-theme="dark">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carousel_home" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carousel_home" data-bs-slide-to="1" aria-label="Slide 2"></button>
         <button type="button" data-bs-target="#carousel_home" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="/static/images/game_warriors_m.png" class="d-block mx-auto w-60" alt="Ой, не загружается">
+    <div class="carousel-inner row">
+        <div class="carousel-item active col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9">
+            <img src="/static/images/game_warriors_m.png" class="d-block mx-auto w-60 col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9" alt="Ой, не загружается">
         </div>
-        <div class="carousel-item">
-            <img src="/static/images/main_img.png" class="d-block mx-auto w-60" alt="Ой, не загружается">
+        <div class="carousel-item col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9">
+            <img src="/static/images/main_img.png" class="d-block mx-auto w-60 col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9" alt="Ой, не загружается">
         </div>
-        <div class="carousel-item">
-            <img src="/static/images/gigatron_fon.png" class="d-block mx-auto w-60" alt="Ой, не загружается">
+        <div class="carousel-item col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9">
+            <img src="/static/images/gigatron_fon.png" class="d-block mx-auto w-60 col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9" alt="Ой, не загружается">
         </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carousel_home" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Последний</span>
+        <span class="visually-hidden">Предыдущий</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#carousel_home" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -78,12 +63,16 @@
 </div>
 
 {% endblock %}
-
 {% block foot %}
-<footer class="page-footer" width="100" style="width: 100%; bottom: 0; left: 0;">
-    <nav class="navbar navbar-expand-md bg-dark mt-5">
-        <p class="text-white ms-5 mt-3">© 2024 DreamG. Все права защищены.</br>Сайт был разработан с любовью компанией Just Web.</p>
-        <p class="text-white text-md-end">Текущая версия: V.03.01</p>
-    </nav>
-</footer>
+<div class="container-fluid mt-3">
+    <div class="row col-8 col-sm-8 col-md-12 col-lg-12 col-xl-3">
+        <p class="text-white">© 2024 DreamG. Все права защищены.</p>
+    </div>
+    <div class="row col-10 col-sm-12 col-md-10 col-lg-12 col-xl-3">
+        <p class="text-white">Сайт был разработан с любовью компанией Just Web</p>
+    </div>
+    <div class="row col-6 col-sm-6 col-md-12 col-lg-12 col-xl-2">
+        <p class="text-white">Текущая версия: V.05.01</p>
+    </div>
+</div>
 {% endblock %}

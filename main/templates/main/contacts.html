@@ -1,61 +1,75 @@
 {% extends 'index.html' %}
 
-<link rel="stylesheet" href="../../static/css/base.css">
-
 {% block container_content %}
+
 <!-- Icon & name in navigation en -->
-<a class="navbar-brand ms-5" href="{% url 'home' %}">
-    <img src="../../static/images/icon.jpg" width="50" height="50">
-</a>
-<a class="nav-link active" href="{% url 'home' %}">
-    <h3 class="text-white" lang="en">DreamG</h3>
-</a>
+<div class="container-fluid col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex justify-content-start">
+    <div class="row col-8 col-sm-7 col-md-7 col-lg-6 col-xl-5">
+        <a class="navbar-brand ms-3 mt-1 col-5 col-sm-5 col-md-3 col-lg-3 col-xl-3" href="{% url 'home' %}">
+            <img src="../../static/images/icon.jpg" width="50" height="50">
+        </a>
+        <a class="nav-link active col-5 col-sm-5 col-md-3 col-lg-3 col-xl-2" href="{% url 'home' %}">
+            <h3 class="text-white mt-3" lang="en">DreamG</h3>
+        </a>
+    </div>
+</div>
 
 <!-- Navigation en -->
-<div class="collapse navbar-collapse" id="navbarSupportedContent_en">
-    <ul class="navbar-nav mx-md-auto">
-        <li class="nav-item me-5">
-            <a class="nav-link active" aria-current="page" href="{% url 'home' %}"><h3 class="text-white">HOME</h3></a>
-        </li>
-        <li class="nav-item me-5 ms-5">
-            <a class="nav-link active" aria-current="page" href="{% url 'games' %}"><h3 class="text-white">GAMES</h3></a>
-        </li>
-        <li class="nav-item me-5 ms-5">
-            <a class="nav-link active" aria-current="page" href="{% url 'projects' %}"><h3 class="text-white">OTHER PROJECTS</h3></a>
-        </li>
-        <li class="nav-item me-5 ms-5">
-            <a class="nav-link active" aria-current="page" href="{% url 'contacts' %}"><h3 class="text-white">CONTACTS</h3></a>
-        </li>
-    </ul>
-</div>
-{% endblock %}
-
-{% block main_content %}
-    <link rel="stylesheet" href="../../static/css/contacts.css">
-
-    <div id="contacts" class="ms-5 mt-5 lh-base text-wrap" lang="en">
-        <h2>Follow us</h2>
-        <div class="container-fluid">
-            <a class="icon-link mt-5" href="https://dream-g.itch.io" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                    <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
-                </svg>
-                We are on itch.io
-            </a>
-            <!--
-            <a class="icon-link ms-5" href="https://www.instagram.com/dreamg_games?igsh=dnIxYnpzdWRnZ25h" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
-                    <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
-                </svg>
-                Our Instagram
-            </a>
-            -->
+<div id="navbarSupportedContent_ru" class="container-fluid mt-3 ms-3 col-12 col-sm-12 col-md-9 col-lg-9 col-xl-12 p-2 flex-fill">
+    <div class="row col-7 col-sm-7 col-md-9 col-lg-9 col-xl-12">
+        <div class="col-12 col-sm-12 col-md-3 col-lg-2 col-xl-3">
+            <a class="nav-link active" href="{% url 'home' %}"><h3 class="text-white">HOME</h3></a>
+        </div>
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
+            <a class="nav-link active" href="{% url 'games' %}"><h3 class="text-white">GAMES</h3></a>
+        </div>
+        <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
+            <a class="nav-link active" href="{% url 'projects' %}"><h3 class="text-white">OTHER PROJECTS</h3></a>
+        </div>
+        <div class="col-12 col-sm-12 col-md-3 col-lg-2 col-xl-1">
+            <a class="nav-link active" href="{% url 'contacts' %}"><h3 class="text-white">CONTACTS</h3></a>
         </div>
     </div>
+</div>
+{% endblock %}
+{% block main_content %}
+<link rel="stylesheet" href="../../static/css/contacts.css">
+
+<div id="contacts" class="ms-5 mt-5 mb-5 lh-base text-wrap" lang="en">
+    <h2>Follow us</h2>
+    <a class="icon-link mt-5" href="https://dream-g.itch.io" target="_blank">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+            <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+        </svg>
+        We are on itch.io
+    </a>
+        <!--
+           <a class="icon-link ms-5" href="https://www.instagram.com/dreamg_games?igsh=dnIxYnpzdWRnZ25h" target="_blank">
+               <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                   <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+               </svg>
+               Our Instagram
+           </a>
+          -->
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4" style="background-color:#ff9999; height: 25px;" lang="en"><p>This is a dream</p></div>
+        <div class="col-lg-4" style="background-color:#99CCFF; height: 25px;" lang="en"><p>This is a lifestyle</p></div>
+        <div class="col-lg-4" style="background-color:#00CC99; height: 25px;" lang="en"><p>Made with love for you</p></div>
+    </div>
+</div>
 {% endblock %}
 {% block foot %}
-<div class="container-fluid">
-    <p class="text-white ms-5 mt-3">© 2024 DreamG. All rights reserved.</br>The site was developed with love by Just Web</p>
-    <p class="text-white text-md-end me-3">Current version: V.02.01</p>
+<div class="container-fluid mt-3">
+    <div class="row col-8 col-sm-8 col-md-12 col-lg-12 col-xl-3">
+        <p class="text-white">© 2024 DreamG. All rights reserved.</p>
+    </div>
+    <div class="row col-10 col-sm-12 col-md-10 col-lg-12 col-xl-3">
+        <p class="text-white">The site was developed with love by Just Web</p>
+    </div>
+    <div class="row col-6 col-sm-6 col-md-12 col-lg-12 col-xl-2">
+        <p class="text-white">Current version: V.05.01</p>
+    </div>
 </div>
 {% endblock %}

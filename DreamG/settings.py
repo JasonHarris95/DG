@@ -13,7 +13,7 @@ import os
 from math import trunc
 from pathlib import Path
 
-from django.conf.global_settings import SECRET_KEY, STATIC_ROOT, DEBUG
+from django.conf.global_settings import SECRET_KEY, STATIC_ROOT, DEBUG, ALLOWED_HOSTS
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -22,12 +22,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-^n_+$l_8elyx24owf7fb&#@+t$_aik_lt&d%y=m*#(@=2j8q5c')
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-^n_+$l_8elyx24owf7fb&#@+t$_aik_lt&d%y=m*#(@=2j8q5c')     ####
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))
+DEBUG = bool(os.environ.get('DJANGO_DEBUG', True))                                                                         #####
 
-ALLOWED_HOSTS = ['dreamgames.xyz', 'www.dreamgames.xyz']
+ALLOWED_HOSTS = ['dreamgames.xyz', 'www.dreamgames.xyz']                                                                    ####
+
 #INTERNAL_IPS = ["127.0.0.1",]
 
 # Application definition
@@ -83,7 +84,7 @@ WSGI_APPLICATION = 'DreamG.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.mysql',                                                                            ######
         'NAME': 'u2895647_django',
     }
 }
