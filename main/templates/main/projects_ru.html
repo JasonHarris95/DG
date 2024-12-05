@@ -2,40 +2,51 @@
 
 {% block container_content %}
 
-<!-- Icon & name in navigation en -->
-<div class="container-fluid col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex justify-content-start">
-    <div class="row col-8 col-sm-7 col-md-7 col-lg-6 col-xl-5">
-        <a class="navbar-brand ms-3 mt-1 col-5 col-sm-5 col-md-3 col-lg-3 col-xl-3" href="{% url 'home_ru' %}">
+<div class="container-fluid row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+    <!-- Icon & name in navigation en -->
+    <div class="row col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+        <a class="navbar-brand ms-3 mt-1 col-4 col-sm-4 col-md-3 col-lg-2 col-xl-2" href="{% url 'home_ru' %}">
             <img src="../../static/images/icon.jpg" width="50" height="50">
         </a>
         <a class="nav-link active col-5 col-sm-5 col-md-3 col-lg-3 col-xl-2" href="{% url 'home_ru' %}">
             <h3 class="text-white mt-3" lang="en">DreamG</h3>
         </a>
     </div>
-</div>
 
-<!-- Navigation ru -->
-<div id="navbarSupportedContent_ru" class="container-fluid mt-3 ms-3 col-12 col-sm-12 col-md-9 col-lg-9 col-xl-12 p-2 flex-fill">
-    <div class="row col-7 col-sm-7 col-md-9 col-lg-9 col-xl-12">
+    <!-- Navigation en -->
+    <div id="navbarSupportedContent_ru" class="mt-3 ms-1 row col-12 col-sm-12 col-md-9 col-lg-7 col-xl-6">
         <div class="col-12 col-sm-12 col-md-3 col-lg-2 col-xl-3">
             <a class="nav-link active" href="{% url 'home_ru' %}"><h3 class="text-white">ГЛАВНАЯ</h3></a>
         </div>
-        <div class="col-12 col-sm-12 col-md-3 col-lg-2 col-xl-2">
+        <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
             <a class="nav-link active" href="{% url 'games_ru' %}"><h3 class="text-white">ИГРЫ</h3></a>
         </div>
         <div class="col-12 col-sm-12 col-md-6 col-lg-5 col-xl-5">
             <a class="nav-link active" href="{% url 'projects_ru' %}"><h3 class="text-white">ДРУГИЕ ПРОЕКТЫ</h3></a>
         </div>
-        <div class="col-12 col-sm-12 col-md-3 col-lg-2 col-xl-2">
+        <div class="col-12 col-sm-12 col-md-3 col-lg-2 col-xl-1">
             <a class="nav-link active" href="{% url 'contacts_ru' %}"><h3 class="text-white">КОНТАКТЫ</h3></a>
         </div>
     </div>
+
+    <!-- Change language -->
+    <div class="row col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 d-flex justify-content-end" style="color:#ff9999">
+        <a class="nav-link active ms-5 me-2 col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" href="{% url 'projects_ru' %}">
+            <h3 lang="en">RU</h3>
+        </a>
+        <h3 class="mx-3 col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"> | </h3>
+        <a class="nav-link active col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" href="{% url 'projects' %}">
+            <h3 lang="en">EN</h3>
+        </a>
+    </div>
 </div>
+
 {% endblock %}
 {% block main_content %}
 <link rel="stylesheet" href="../../static/css/projects.css">
 
-<div class="container-fluid">
+<div class="container-fluid mb-5">
 
     <!-- Card -->
     <div class="lh-base text-wrap row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -52,7 +63,7 @@
             </div>
         </div>
 
-        <div id="description" class="card text-bg-light ms-3 mt-5 mb-5 lh-base text-wrap row col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9">
+        <div id="description" class="card text-bg-light ms-3 mt-5 lh-base text-wrap row col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9">
             <div id="text" class="ms-1 me-1 mt-3"><b>Глава первая. Начало</b><br>
                 <p class="mt-3">2040 год. В ту роковую ночь сверкала ослепительная, ядовито-сернистая молния, шёл проливной, промозглый до мозга костей дождь, невыносимо несло чьим-то дерьмом… На улицах мрачного, жестокого города, с огромными, давящими и поглощающими неоготическими небоскребами, где лишь немногим удавалось добиться успеха, сгребая трупы тракторным ковшом, окутывая смрад могильным туманом, по ночам не было никого, лишь монстры, давно лишившиеся души. И только гордые мрачные горгульи смотрели свысока, на мокрые от дождя улицы.</p>
                 <p>Повсюду виднелись странные фигуры, разодетые как на кровавый карновал, в закоулках стояли ночные бабочки в шипованных, кожаный куртках. У дороги стояли две девушки с волосами, неестественного цвета и измененными ДНК под стать своим вкусам, будто они не люди, а животные. Мимо проносились машины на воздушной подушке, а в них ехали счастливые дамы, дорого одетые со своими богатыми мужчинами.</p>
@@ -76,25 +87,12 @@
         </div>
     </div>
 </div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-4" style="background-color:#ff9999; height: 25px;"><p>Это мечта</p></div>
-        <div class="col-lg-4" style="background-color:#99CCFF; height: 25px;"><p>Это образ жизни</p></div>
-        <div class="col-lg-4" style="background-color:#00CC99; height: 25px;"><p>Сделано с любовью для вас</p></div>
+<div class="container-fluid sticky-bottom">
+    <div class="row text-center text-white">
+        <div class="col-4" style="background-color:#ff9999; height: 25px; border-radius: 50px 0px 0px 0px;" lang="en"><b>Это мечта</b></div>
+        <div class="col-4" style="background-color:#99CCFF; height: 25px; border-radius: 0px 0px 0px 0px;" lang="en"><b>Это образ жизни</b></div>
+        <div class="col-4" style="background-color:#00CC99; height: 25px; border-radius: 0px 50px 0px 0px;" lang="en"><b>Сделано для вас</b></div>
     </div>
 </div>
 
-{% endblock %}
-{% block foot %}
-<div class="container-fluid mt-3">
-    <div class="row col-8 col-sm-8 col-md-12 col-lg-12 col-xl-3">
-        <p class="text-white">© 2024 DreamG. Все права защищены.</p>
-    </div>
-    <div class="row col-10 col-sm-12 col-md-10 col-lg-12 col-xl-3">
-        <p class="text-white">Сайт был разработан с любовью компанией Just Web</p>
-    </div>
-    <div class="row col-6 col-sm-6 col-md-12 col-lg-12 col-xl-2">
-        <p class="text-white">Текущая версия: V.05.01</p>
-    </div>
-</div>
 {% endblock %}

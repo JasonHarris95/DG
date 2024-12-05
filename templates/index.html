@@ -44,20 +44,6 @@
         <!-- All block navigation -->
         <nav class="navbar navbar-expand-md bg-dark">
             {% block container_content %} {% endblock %}
-
-            <!-- Change language -->
-            <div class="container-fluid col-12 col-sm-12 col-md-7 col-lg-4 col-xl-4 d-flex justify-content-end">
-                <div class="row col-6 col-sm-6 col-md-6 col-lg-5 col-xl-4" style="color:#ff9999">
-                    <a class="nav-link active ms-5 me-2 col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" href="{% url 'home_ru' %}">
-                        <h3 lang="en">RU</h3>
-                    </a>
-                    <h3 class="mx-3 col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"> | </h3>
-                    <a class="nav-link active col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" href="{% url 'home' %}">
-                        <h3 lang="en">EN</h3>
-                    </a>
-                </div>
-            </div>
-
         </nav>
     </header>
 
@@ -82,8 +68,19 @@
     </main>
 
     <footer>
-        <nav class="navbar navbar-expand-md bg-dark mt-5">
+        <nav class="navbar navbar-expand-md bg-dark">
             {% block foot %}{% endblock %}
+            <div class="container-fluid mt-3 text-center">
+                <div class="ms-2 row col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                    <p class="text-white">{{ rights_reserved }}</p>
+                </div>
+                <div class="row col-12 col-sm-12 col-md-4 col-lg-6 col-xl-6">
+                    <p class="text-white">{{ was_developed }}</p>
+                </div>
+                <div class="me-2 row col-12 col-sm-12 col-md-4 col-lg-3 col-xl-3">
+                    <p class="text-white">{{ current_version }}</p>
+                </div>
+            </div>
         </nav>
     </footer>
 </body>

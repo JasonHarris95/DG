@@ -2,21 +2,20 @@
 
 {% block container_content %}
 
-<!-- Icon & name in navigation en -->
-<div class="container-fluid col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex justify-content-start">
-    <div class="row col-8 col-sm-7 col-md-7 col-lg-6 col-xl-5">
-        <a class="navbar-brand ms-3 mt-1 col-5 col-sm-5 col-md-3 col-lg-3 col-xl-3" href="{% url 'home' %}">
+<div class="container-fluid row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+    <!-- Icon & name in navigation en -->
+    <div class="row col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+        <a class="navbar-brand ms-3 mt-1 col-4 col-sm-4 col-md-3 col-lg-2 col-xl-2" href="{% url 'home' %}">
             <img src="../../static/images/icon.jpg" width="50" height="50">
         </a>
         <a class="nav-link active col-5 col-sm-5 col-md-3 col-lg-3 col-xl-2" href="{% url 'home' %}">
             <h3 class="text-white mt-3" lang="en">DreamG</h3>
         </a>
     </div>
-</div>
 
-<!-- Navigation en -->
-<div id="navbarSupportedContent_ru" class="container-fluid mt-3 ms-3 col-12 col-sm-12 col-md-9 col-lg-9 col-xl-12 p-2 flex-fill">
-    <div class="row col-10 col-sm-10 col-md-10 col-lg-12 col-xl-12">
+    <!-- Navigation en -->
+    <div id="navbarSupportedContent_ru" class="mt-3 ms-1 row col-12 col-sm-12 col-md-9 col-lg-7 col-xl-6">
         <div class="col-12 col-sm-12 col-md-3 col-lg-2 col-xl-3">
             <a class="nav-link active" href="{% url 'home' %}"><h3 class="text-white">HOME</h3></a>
         </div>
@@ -30,12 +29,24 @@
             <a class="nav-link active" href="{% url 'contacts' %}"><h3 class="text-white">CONTACTS</h3></a>
         </div>
     </div>
+
+    <!-- Change language -->
+    <div class="row col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 d-flex justify-content-end" style="color:#ff9999">
+        <a class="nav-link active ms-5 me-2 col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" href="{% url 'games_ru' %}">
+            <h3 lang="en">RU</h3>
+        </a>
+        <h3 class="mx-3 col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"> | </h3>
+        <a class="nav-link active col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" href="{% url 'games' %}">
+            <h3 lang="en">EN</h3>
+        </a>
+    </div>
 </div>
+
 {% endblock %}
 {% block main_content %}
-<link rel="stylesheet" href="../../static/css/game.css">
 
 <div class="container-fluid">
+    <link rel="stylesheet" href="../../static/css/game.css">
      <div class="ms-2 mt-5 lh-base text-wrap row" lang="en">
         <h3 class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">WARRIORS M</h3>
 
@@ -44,66 +55,68 @@
          </div>
          <div class="row mt-3 col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
              <div id="png_one" class="row mt-3 col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
-                 <img src="../../static/images/354536.jpg" alt="Ops, don't load" style="">
+                 <img src="../../static/images/354536.jpg" alt="Ops, don't load">
              </div>
             <div id="png_two" class="mt-3 row mt-3 col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
-                <img src="../../static/images/235436.png" alt="Ops, don't load" style="">
+                <img src="../../static/images/235436.png" alt="Ops, don't load">
             </div>
             <div id="png_three" class="mt-3 row mt-3 col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
-                <img src="../../static/images/576779.jpg" alt="Ops, don't load" style="">
+                <img src="../../static/images/576779.jpg" alt="Ops, don't load">
             </div>
             <div id="png_four" class="mt-3 row mt-3 col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
-                <img src="../../static/images/8547353.jpg" alt="Ops, don't load" style="">
+                <img src="../../static/images/8547353.jpg" alt="Ops, don't load">
             </div>
          </div>
 
-        <div id="description_warriors_m" class="row mt-3 col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
-            <i>Platform: Android</i><br>
-            <i>Genre: shoot 'em up</i><br>
-            <p class="mt-2">Stop the invasion of the evil deity and save the Universe! Go through all the levels of a huge castle, fighting with different minions and find great power to defeat evil!</p>
-            <p>The game is in active development</p>
-            <a href="https://dream-g.itch.io/warriors-m" target="_blank">Follow the news here</a>
-        </div>
+         <div id="description_warriors_m" class="row mt-3 col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6" style="font-size:1.3em; float:left;">
+             <i>Platform: Android</i><br>
+             <i>Genre: shoot 'em up</i><br>
+             <p class="mt-2">Stop the invasion of the evil deity and save the Universe! Go through all the levels of a huge castle, fighting with different minions and find great power to defeat evil!</p>
+
+             <a class="icon-link" href="https://www.rustore.ru/catalog/app/com.DreamG.WarrirosM" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-android2" viewBox="0 0 16 16">
+                    <path d="m10.213 1.471.691-1.26q.069-.124-.048-.192-.128-.057-.195.058l-.7 1.27A4.8 4.8 0 0 0 8.005.941q-1.032 0-1.956.404l-.7-1.27Q5.281-.037 5.154.02q-.117.069-.049.193l.691 1.259a4.25 4.25 0 0 0-1.673 1.476A3.7 3.7 0 0 0 3.5 5.02h9q0-1.125-.623-2.072a4.27 4.27 0 0 0-1.664-1.476ZM6.22 3.303a.37.37 0 0 1-.267.11.35.35 0 0 1-.263-.11.37.37 0 0 1-.107-.264.37.37 0 0 1 .107-.265.35.35 0 0 1 .263-.11q.155 0 .267.11a.36.36 0 0 1 .112.265.36.36 0 0 1-.112.264m4.101 0a.35.35 0 0 1-.262.11.37.37 0 0 1-.268-.11.36.36 0 0 1-.112-.264q0-.154.112-.265a.37.37 0 0 1 .268-.11q.155 0 .262.11a.37.37 0 0 1 .107.265q0 .153-.107.264M3.5 11.77q0 .441.311.75.311.306.76.307h.758l.01 2.182q0 .414.292.703a.96.96 0 0 0 .7.288.97.97 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h1.343v2.182q0 .414.292.703a.97.97 0 0 0 .71.288.97.97 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h.76q.436 0 .749-.308.31-.307.311-.75V5.365h-9zm10.495-6.587a.98.98 0 0 0-.702.278.9.9 0 0 0-.293.685v4.063q0 .406.293.69a.97.97 0 0 0 .702.284q.42 0 .712-.284a.92.92 0 0 0 .293-.69V6.146a.9.9 0 0 0-.293-.685 1 1 0 0 0-.712-.278m-12.702.283a1 1 0 0 1 .712-.283q.41 0 .702.283a.9.9 0 0 1 .293.68v4.063a.93.93 0 0 1-.288.69.97.97 0 0 1-.707.284 1 1 0 0 1-.712-.284.92.92 0 0 1-.293-.69V6.146q0-.396.293-.68"/>
+                </svg>
+                Download here
+            </a>
+         </div>
+
     </div>
 
     <div id="GigaTron_5000" class="ms-2 mt-5 lh-base text-wrap row" lang="en">
         <h3 class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">GigaTron 5000</h3>
 
-        <div id="games_gigatron" class="row mt-3 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-3">
-            <img src="../../static/images/games_gigatron.jpg" alt="Ops, don't load" style="">
-        </div>
-        <div id="games_gigatron_2" class="row mt-3 col-12 col-sm-12 col-md-12 col-lg-12 col-xl-4">
-            <img src="../../static/images/games_gigatron_2.jpg" alt="Ops, don't load" style="">
+        <div class="row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div id="games_gigatron" class="row mt-3 col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                <img src="../../static/images/games_gigatron.jpg" alt="Ops, don't load">
+            </div>
+            <div id="games_gigatron_2" class="row mt-3 col-12 col-sm-12 col-md-4 col-lg-4 col-xl-3">
+                <img src="../../static/images/games_gigatron_2.jpg" alt="Ops, don't load">
+            </div>
         </div>
 
-        <div id="description_gigatron" class="row mt-3 mb-5 col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
+        <div id="description_gigatron" class="row mt-3 col-12 col-sm-12 col-md-8 col-lg-6 col-xl-6">
             <i>Platform: PC</i><br>
             <i>Genre: arcade</i><br>
             <p class="mt-2">Take on the role of an antivirus program! Viruses are trying to penetrate the PC system and only GigaTron 5000 antivirus can stop them</p>
-            <a href="https://dream-g.itch.io/gigatron5000" target="_blank">Download here</a>
+            <a class="icon-link mb-5" href="https://dream-g.itch.io/gigatron5000" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-android2" viewBox="0 0 16 16">
+                    <path d="m10.213 1.471.691-1.26q.069-.124-.048-.192-.128-.057-.195.058l-.7 1.27A4.8 4.8 0 0 0 8.005.941q-1.032 0-1.956.404l-.7-1.27Q5.281-.037 5.154.02q-.117.069-.049.193l.691 1.259a4.25 4.25 0 0 0-1.673 1.476A3.7 3.7 0 0 0 3.5 5.02h9q0-1.125-.623-2.072a4.27 4.27 0 0 0-1.664-1.476ZM6.22 3.303a.37.37 0 0 1-.267.11.35.35 0 0 1-.263-.11.37.37 0 0 1-.107-.264.37.37 0 0 1 .107-.265.35.35 0 0 1 .263-.11q.155 0 .267.11a.36.36 0 0 1 .112.265.36.36 0 0 1-.112.264m4.101 0a.35.35 0 0 1-.262.11.37.37 0 0 1-.268-.11.36.36 0 0 1-.112-.264q0-.154.112-.265a.37.37 0 0 1 .268-.11q.155 0 .262.11a.37.37 0 0 1 .107.265q0 .153-.107.264M3.5 11.77q0 .441.311.75.311.306.76.307h.758l.01 2.182q0 .414.292.703a.96.96 0 0 0 .7.288.97.97 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h1.343v2.182q0 .414.292.703a.97.97 0 0 0 .71.288.97.97 0 0 0 .71-.288.95.95 0 0 0 .292-.703v-2.182h.76q.436 0 .749-.308.31-.307.311-.75V5.365h-9zm10.495-6.587a.98.98 0 0 0-.702.278.9.9 0 0 0-.293.685v4.063q0 .406.293.69a.97.97 0 0 0 .702.284q.42 0 .712-.284a.92.92 0 0 0 .293-.69V6.146a.9.9 0 0 0-.293-.685 1 1 0 0 0-.712-.278m-12.702.283a1 1 0 0 1 .712-.283q.41 0 .702.283a.9.9 0 0 1 .293.68v4.063a.93.93 0 0 1-.288.69.97.97 0 0 1-.707.284 1 1 0 0 1-.712-.284.92.92 0 0 1-.293-.69V6.146q0-.396.293-.68"/>
+                </svg>
+                Download here
+            </a>
         </div>
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-4" style="background-color:#ff9999; height: 25px;" lang="en"><p>This is a dream</p></div>
-        <div class="col-lg-4" style="background-color:#99CCFF; height: 25px;" lang="en"><p>This is a lifestyle</p></div>
-        <div class="col-lg-4" style="background-color:#00CC99; height: 25px;" lang="en"><p>Made with love for you</p></div>
+
     </div>
 </div>
 
-{% endblock %}
-{% block foot %}
-<div class="container-fluid mt-3">
-    <div class="row col-8 col-sm-8 col-md-12 col-lg-12 col-xl-3">
-        <p class="text-white">© 2024 DreamG. All rights reserved.</p>
-    </div>
-    <div class="row col-10 col-sm-12 col-md-10 col-lg-12 col-xl-3">
-        <p class="text-white">The site was developed with love by Just Web</p>
-    </div>
-    <div class="row col-6 col-sm-6 col-md-12 col-lg-12 col-xl-2">
-        <p class="text-white">Current version: V.05.01</p>
+<div class="container-fluid sticky-bottom">
+    <div class="row text-center text-white">
+        <div class="col-4" style="background-color:#ff9999; height: 25px; border-radius: 50px 0px 0px 0px;" lang="en"><b>This is a dream</b></div>
+        <div class="col-4" style="background-color:#99CCFF; height: 25px; border-radius: 0px 0px 0px 0px;" lang="en"><b>This is a lifestyle</b></div>
+        <div class="col-4" style="background-color:#00CC99; height: 25px; border-radius: 0px 50px 0px 0px;" lang="en"><b>Made with love</b></div>
     </div>
 </div>
+
 {% endblock %}
 

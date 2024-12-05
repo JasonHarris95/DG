@@ -2,21 +2,20 @@
 
 {% block container_content %}
 
-<!-- Icon & name in navigation en -->
-<div class="container-fluid col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex justify-content-start">
-    <div class="row col-8 col-sm-7 col-md-7 col-lg-6 col-xl-5">
-        <a class="navbar-brand ms-3 mt-1 col-5 col-sm-5 col-md-3 col-lg-3 col-xl-3" href="{% url 'home' %}">
+<div class="container-fluid row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+    <!-- Icon & name in navigation en -->
+    <div class="row col-6 col-sm-6 col-md-3 col-lg-3 col-xl-3">
+        <a class="navbar-brand ms-3 mt-1 col-4 col-sm-4 col-md-3 col-lg-2 col-xl-2" href="{% url 'home' %}">
             <img src="../../static/images/icon.jpg" width="50" height="50">
         </a>
         <a class="nav-link active col-5 col-sm-5 col-md-3 col-lg-3 col-xl-2" href="{% url 'home' %}">
             <h3 class="text-white mt-3" lang="en">DreamG</h3>
         </a>
     </div>
-</div>
 
-<!-- Navigation en -->
-<div id="navbarSupportedContent_ru" class="container-fluid mt-3 ms-3 col-12 col-sm-12 col-md-9 col-lg-9 col-xl-12 p-2 flex-fill">
-    <div class="row col-7 col-sm-7 col-md-9 col-lg-9 col-xl-12">
+    <!-- Navigation en -->
+    <div id="navbarSupportedContent_ru" class="mt-3 ms-1 row col-12 col-sm-12 col-md-9 col-lg-7 col-xl-6">
         <div class="col-12 col-sm-12 col-md-3 col-lg-2 col-xl-3">
             <a class="nav-link active" href="{% url 'home' %}"><h3 class="text-white">HOME</h3></a>
         </div>
@@ -30,12 +29,24 @@
             <a class="nav-link active" href="{% url 'contacts' %}"><h3 class="text-white">CONTACTS</h3></a>
         </div>
     </div>
+
+    <!-- Change language -->
+    <div class="row col-12 col-sm-12 col-md-6 col-lg-3 col-xl-3 d-flex justify-content-end" style="color:#ff9999">
+        <a class="nav-link active ms-5 me-2 col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" href="{% url 'projects_ru' %}">
+            <h3 lang="en">RU</h3>
+        </a>
+        <h3 class="mx-3 col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1"> | </h3>
+        <a class="nav-link active col-1 col-sm-1 col-md-1 col-lg-1 col-xl-1" href="{% url 'projects' %}">
+            <h3 lang="en">EN</h3>
+        </a>
+    </div>
 </div>
+
 {% endblock %}
 {% block main_content %}
 <link rel="stylesheet" href="../../static/css/projects.css">
 
-<div class="container-fluid">
+<div class="container-fluid mb-5">
 
     <!-- Card -->
     <div class="lh-base text-wrap row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
@@ -52,7 +63,7 @@
             </div>
         </div>
 
-        <div id="description" class="card text-bg-light ms-3 mt-5 mb-5 lh-base text-wrap row col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9" lang="en">
+        <div id="description" class="card text-bg-light ms-3 mt-5 lh-base text-wrap row col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9" lang="en">
             <div id="text" class="ms-1 me-1 mt-3"><b>Chapter One. Beginning</b><br>
                 <p class="mt-3">2040. On that fateful night, blinding, poisonous-sulfurous lightning flashed, pouring, bone-chilling rain fell, and the unbearable stench of someone's shit was unbearable... On the streets of a gloomy, cruel city, with huge, crushing and absorbing neo-Gothic skyscrapers, where only a few managed to succeed, raking corpses with a tractor bucket, enveloping the stench in a grave fog, there was no one at night, only monsters that had long since lost their souls. And only proud, gloomy gargoyles looked down on the streets wet from the rain.</p>
                 <p>Everywhere, strange figures were visible, dressed as if for a bloody carnival, in the back alleys stood night butterflies in studded leather jackets. By the road stood two girls with hair of an unnatural color and altered DNA to match their tastes, as if they were not people, but animals. Hovercrafts flew past, and in them rode happy ladies, expensively dressed, with their rich men.</p>
@@ -76,25 +87,11 @@
         </div>
     </div>
 </div>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-4" style="background-color:#ff9999; height: 25px;" lang="en"><p>This is a dream</p></div>
-        <div class="col-lg-4" style="background-color:#99CCFF; height: 25px;" lang="en"><p>This is a lifestyle</p></div>
-        <div class="col-lg-4" style="background-color:#00CC99; height: 25px;" lang="en"><p>Made with love for you</p></div>
-    </div>
-</div>
-
-{% endblock %}
-{% block foot %}
-<div class="container-fluid mt-3">
-    <div class="row col-8 col-sm-8 col-md-12 col-lg-12 col-xl-3">
-        <p class="text-white">© 2024 DreamG. All rights reserved.</p>
-    </div>
-    <div class="row col-10 col-sm-12 col-md-10 col-lg-12 col-xl-3">
-        <p class="text-white">The site was developed with love by Just Web</p>
-    </div>
-    <div class="row col-6 col-sm-6 col-md-12 col-lg-12 col-xl-2">
-        <p class="text-white">Current version: V.05.01</p>
+<div class="container-fluid sticky-bottom">
+    <div class="row text-center text-white">
+        <div class="col-4" style="background-color:#ff9999; height: 25px; border-radius: 50px 0px 0px 0px;" lang="en"><b>This is a dream</b></div>
+        <div class="col-4" style="background-color:#99CCFF; height: 25px; border-radius: 0px 0px 0px 0px;" lang="en"><b>This is a lifestyle</b></div>
+        <div class="col-4" style="background-color:#00CC99; height: 25px; border-radius: 0px 50px 0px 0px;" lang="en"><b>Made with love</b></div>
     </div>
 </div>
 {% endblock %}
