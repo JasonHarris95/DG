@@ -48,31 +48,33 @@
 {% block main_content %}
 
 <!-- Block carousel -->
-<div id="carousel_home" class="carousel slide mt-5 ms-4" data-bs-ride="carousel" data-bs-theme="dark" lang="en">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carousel_home" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carousel_home" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carousel_home" data-bs-slide-to="2" aria-label="Slide 3"></button>
+<div class="container-fluid mb-4">
+    <div id="carousel_home" class="carousel slide mt-5 ms-4" data-bs-ride="carousel" data-bs-theme="light" lang="en">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel_home" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carousel_home" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carousel_home" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner row">
+            <div class="carousel-item active col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <img src="/static/images/game_warriors_m.png" class="d-block mx-auto col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9" alt="Ops, don't load">
+            </div>
+            <div class="carousel-item col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <img src="/static/images/main_img.png" class="d-block mx-auto col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9" alt="Ops, don't load">
+            </div>
+            <div class="carousel-item col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <img src="/static/images/gigatron_fon.png" class="d-block mx-auto col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9" alt="Ops, don't load">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carousel_home" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Last</span>
+        </button>
+        <button class="carousel-control-next me-4" type="button" data-bs-target="#carousel_home" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <div class="carousel-inner row">
-        <div class="carousel-item active col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9">
-            <img src="/static/images/game_warriors_m.png" class="d-block mx-auto w-60 col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9" alt="Ops, don't load">
-        </div>
-        <div class="carousel-item col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9">
-            <img src="/static/images/main_img.png" class="d-block mx-auto w-60 col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9" alt="Ops, don't load">
-        </div>
-        <div class="carousel-item col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9">
-            <img src="/static/images/gigatron_fon.png" class="d-block mx-auto w-60 col-12 col-sm-12 col-md-10 col-lg-9 col-xl-9" alt="Ops, don't load">
-        </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carousel_home" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Last</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carousel_home" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
 </div>
 
 {% endblock %}
